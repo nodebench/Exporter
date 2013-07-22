@@ -21,7 +21,7 @@
 # Blender Version                     2.68
 # Exporter Version                    0.0.1
 # Created on                          19-Jul-2013
-# Author                              AppleCart
+# Author                              NodeBench
 # --------------------------------------------------------------------------
 
 
