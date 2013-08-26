@@ -32,7 +32,7 @@ def version_bump():
     of the exporter in all files.
     Then manually merge the release branch to the master branch to finalise the release. 
     '''
-    zip_version = '0.0.3'
+    zip_version = '0.0.2'
     search_path = '../sunflow'
     bump(zip_version, search_path)
 
