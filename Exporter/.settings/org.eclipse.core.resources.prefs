@@ -4,6 +4,7 @@ encoding//src/sunflow/__init__.py=utf8
 encoding//src/sunflow/core/__init__.py=utf8
 encoding//src/sunflow/export/__init__.py=utf8
 encoding//src/sunflow/ui/__init__.py=utf8
+encoding//src/sunflow/ui/lamps.py=utf8
 encoding//src/sunflow/ui/materials.py=utf8
 encoding//src/sunflow/ui/render.py=utf8
 encoding//src/sunflow/ui/renderlayers.py=utf8
