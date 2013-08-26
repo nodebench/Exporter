@@ -37,7 +37,7 @@ def create_release_package():
     but inside blender addon folder it requires in a form like 
     sunflow/modules. so zipped installer should only contain this sunflow sub folder.
     '''
-    zip_version = '0.0.3'
+    zip_version = '0.0.2'
     search_path = '../sunflow'
     zipit(zip_version, search_path)
 
