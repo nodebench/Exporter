@@ -1,6 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/bookkeeping/__init__.py=utf8
 encoding//src/bookkeeping/copyfiles.py=utf8
+encoding//src/bookkeeping/modifyrelease.py=utf8
+encoding//src/bookkeeping/zipit.py=utf8
 encoding//src/copyfiles.py=utf8
 encoding//src/sunflow/__init__.py=utf8
 encoding//src/sunflow/core/__init__.py=utf8
