@@ -1,11 +1,34 @@
-'''
-Created on 16-Aug-2013
-@author: AppleCart
-'''
+# -*- coding: utf8 -*-
+#
+# ***** BEGIN GPL LICENSE BLOCK *****
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, see <http://www.gnu.org/licenses/>.
+#
+# ***** END GPL LICENCE BLOCK *****
+#
+# --------------------------------------------------------------------------
+# Blender Version                     2.68
+# Exporter Version                    0.0.2
+# Created on                          19-Jul-2013
+# Author                              NodeBench
+# --------------------------------------------------------------------------
 
 import os
+import bpy
 from .services import is_dupli_child
 from ..outputs import sunflowLog
+
 
 class SunflowSCFileSerializer():
     
@@ -202,6 +225,14 @@ class SunflowSCFileSerializer():
         self._write_output_block(block, [""] , [] , self._fh, False)
     
     
+    def _writeHeader(self, file_path_sc):
+        header = []
+        header.append('/* Sunflow Open Source Rendering System v0.07.3 Scene File */')
+        header.append('/* Generated from blender v%s File: %r */' % (bpy.app.version_string, os.path.basename(bpy.data.filepath)))
+        header.append('/* http://sunflow.sourceforge.net/ */\n')
+        self._write_output_block(header, [""] , [] , self._fh, False)
+        
+    
     def _compileMainBlock(self):
         '''write the main .sc file'''
         self._name = ("%s.%03d" % (self._sn , self._fn))
@@ -210,6 +241,8 @@ class SunflowSCFileSerializer():
             self._writable(self._fh)
         else:
             os.remove(self._fh)
+        
+        self._writeHeader(self._fh)
         
         key_list = ['output', 'trace' , 'background' , 'bucket' , 'caustics' ]
 
