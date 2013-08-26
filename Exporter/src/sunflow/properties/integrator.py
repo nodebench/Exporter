@@ -160,7 +160,7 @@ class sunflow_integrator(declarative_property_group):
             'type': 'enum',
             'attr': 'giOverride',
             'name': 'Gi Override',
-            'description': 'override the global photons and global illumination to render only these feature’s contribution to the scene (so you can fine tune your settings).',
+            'description': 'override the global photons and global illumination to render only these feature`s contribution to the scene (so you can fine tune your settings).',
             'default': 'fullrender',
             'items': [
                 ('fullrender', 'Full Render', 'No Overriding'),

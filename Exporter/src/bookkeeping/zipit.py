@@ -49,7 +49,7 @@ def zipit(zip_version, rel_to_path):
     
     zip_name = os.path.basename(rel_to_path)
     pth_in_zip = os.path.dirname(rel_to_path)
-    zip_file = zip_name + '_v' + zip_version + '.zip'
+    zip_file = zip_name + '_exporter_v' + zip_version + '.zip'
     
     print(zip_file)
     zip_path = os.path.join(zip_to_path, zip_file)
