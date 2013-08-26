@@ -31,7 +31,7 @@ bl_info = {
     "name"       : "Sunflow",
     "description": "Sunflow Render System (v0.07.3) integration for Blender (>2.67)",
     "author"     : "Nodebench" ,
-    "version"    : (0, 0, 1),
+    "version"    : (0, 0, 2),
     "blender"    : (2, 68, 0),
     "api"        : 57908,
     "category"   : "Render",
