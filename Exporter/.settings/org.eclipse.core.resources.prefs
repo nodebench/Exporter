@@ -3,6 +3,7 @@ encoding//src/copyfiles.py=utf8
 encoding//src/sunflow/__init__.py=utf8
 encoding//src/sunflow/core/__init__.py=utf8
 encoding//src/sunflow/export/__init__.py=utf8
+encoding//src/sunflow/outputs/__init__.py=utf8
 encoding//src/sunflow/properties/__init__.py=utf8
 encoding//src/sunflow/properties/camera.py=utf8
 encoding//src/sunflow/properties/integrator.py=utf8
