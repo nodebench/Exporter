@@ -160,15 +160,16 @@ def ObjectsExporter(scene , ObjectsRepository={}, Export_instances=False):
             dmix(ObjectsRepository, proxy_list, 'Instantiated')
             
             
-        # filter objects - avoid instances ;        
+        # filter objects - avoid instances ; 
+               
         noninst = [obj for obj in obj_lst if obj not in ObjectsRepository['Instantiated'].keys() ]
         xlist = [obj for obj in ObjectsRepository['Instantiated'].keys() if ObjectsRepository['Instantiated'][obj][0] in ['GROUP' , 'FRAMES']]
-        
+          
         u = set(noninst)
         v = set(xlist)
         diff = v - u
         noninst.extend([uniq for uniq in diff])
-        
+          
         obj_lst = noninst
 
     ObjectsRepository['ExportedObjects'] = write_mesh_file(obj_lst, scene, not Export_instances , MotionBlurList , scene.camera.data.sunflow_camera.shutterTime)

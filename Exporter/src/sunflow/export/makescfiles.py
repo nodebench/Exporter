@@ -378,6 +378,8 @@ class SunflowSCFileSerializer():
                     
             else:
                 int_blk.append("%s %s %s" % (space * indent , "noinstance", ""))
+                
+                
             int_blk.append("%s %s %s" % (space * indent , "type", "generic-mesh"))
             int_blk.append("%s %s %s" % (space * indent , "name", sub_file))
             

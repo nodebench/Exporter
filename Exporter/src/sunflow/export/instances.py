@@ -42,14 +42,16 @@ def InstanceExporter(scene , objname, turn_on_motion_blur, steps=0):
         obj_parent = scene.objects[objname]
         obj_parent.dupli_list_create(scene)
         dupli_list = {}
+        index = 0
         for obj in obj_parent.dupli_list :
             ins = {}
             pos = getPos(obj, as_matrix=True , grp=(obj_parent.dupli_type == 'GROUP')) 
-            ins['iname'] = "%s.inst.%03d" % (obj_parent.name, obj.index)
-            ins['index'] = obj.index
+            ins['iname'] = "%s.inst.%03d" % (obj_parent.name, index)
+            ins['index'] = index  # obj.index
             ins['pname'] = obj.object.name
             ins['trans'] = [pos]
             dupli_list[ ins['iname'] ] = ins
+            index += 1
         obj_parent.dupli_list_clear()
         return dupli_list
     else:
@@ -57,13 +59,15 @@ def InstanceExporter(scene , objname, turn_on_motion_blur, steps=0):
         obj_parent.dupli_list_create(scene)
         num_dupli = len(obj_parent.dupli_list)
         dupli_list = {}
+        index = 0
         for obj in obj_parent.dupli_list :
             ins = {}  
-            ins['iname'] = "%s.inst.%03d" % (obj_parent.name, obj.index)
-            ins['index'] = obj.index
+            ins['iname'] = "%s.inst.%03d" % (obj_parent.name, index)
+            ins['index'] = index  # obj.index
             ins['pname'] = obj.object.name
             ins['trans'] = None
             dupli_list[ ins['iname'] ] = ins
+            index += 1
         obj_parent.dupli_list_clear()
         
         current_frame , current_subframe = (scene.frame_current, scene.frame_subframe)

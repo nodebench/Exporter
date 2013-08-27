@@ -140,6 +140,7 @@ class RENDERENGINE_sunflow(bpy.types.RenderEngine):
             if not os.path.exists(output_dir):
                 os.mkdir(output_dir)
             #----------- sunflowLog('Sunflow: Current directory = "%s"' % output_dir)
+            
             #--------------------------------------- if DEBUG: pydevd.settrace()
             
             if not getExporter (output_dir, scene.name, scene.frame_current):
@@ -179,7 +180,8 @@ class RENDERENGINE_sunflow(bpy.types.RenderEngine):
             
             cmd_line.extend(extra)
             cmd_line.extend(final_line)
-
+            
+        
             sunflow_process = subprocess.Popen(cmd_line)
             refresh_interval = 5
             
