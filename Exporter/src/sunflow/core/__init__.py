@@ -261,6 +261,8 @@ class RENDERENGINE_sunflow(bpy.types.RenderEngine):
         [ fi.write("\n%s " % line) for line in out_write]
         fi.close()
         
+        src = os.path.join(plugin_path() , "preview", 'SceneFloorUVgrid.png')              
+        shutil.copy(src, tempdir)  
         src = os.path.join(plugin_path() , "preview", 'Scene.sc')              
         shutil.copy(src, tempdir)        
     

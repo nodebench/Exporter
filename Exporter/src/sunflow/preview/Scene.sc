@@ -18,7 +18,7 @@
  shader {
          name "Floor"
          type diffuse
-         texture  "E:\Graphics\Works\Gumbo\uvgrid.png"
+         texture  "SceneFloorUVgrid.png"
          } 
 
  light  {

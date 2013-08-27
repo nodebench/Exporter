@@ -28,7 +28,8 @@ import os
 import shutil
 
 def copyroot():
-    dest_dir = r"C:\Users\AppleCart\AppData\Roaming\Blender Foundation\Blender\2.67\scripts\addons\sunflow"
+    # dest_dir = r"C:\Users\AppleCart\AppData\Roaming\Blender Foundation\Blender\2.67\scripts\addons\sunflow"
+    dest_dir = r'C:\Users\AppleCart\AppData\Roaming\Blender Foundation\Blender\2.68\scripts\addons\sunflow'
     source_dir = r"../sunflow"  
     # source_dir = r"./sunflow"
     print ("Current directory  %s" % (os.curdir))

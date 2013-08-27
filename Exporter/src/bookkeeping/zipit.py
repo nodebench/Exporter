@@ -63,6 +63,13 @@ def zipit(zip_version, rel_to_path):
         for file_in in files:
             fn = os.path.join(base, file_in)
             zip_f.write(fn, fn[rootlen:])
+    
+    
+    includethis = ['../../ReadMe', '../../License' ]
+    includethis = [ (os.path.abspath(path), '/'.join([zip_name , os.path.basename(os.path.abspath(path))])) for path in includethis]
+    
+    for pa, zpa in includethis:
+        zip_f.write(pa, zpa)
 
 if __name__ == '__main__':
     create_release_package()

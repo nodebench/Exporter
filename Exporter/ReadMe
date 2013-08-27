@@ -1,27 +1,55 @@
-# -*- coding: utf8 -*-
-#
-# ***** BEGIN GPL LICENSE BLOCK *****
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, see <http://www.gnu.org/licenses/>.
-#
-# ***** END GPL LICENCE BLOCK *****
-#
-# --------------------------------------------------------------------------
-# Blender Version                     2.68
-# Exporter Version                    0.0.1
-# Created on                          19-Jul-2013
-# Author                              NodeBench
-# --------------------------------------------------------------------------
+Welcome to the Sunflow Exporter!
 
-Blender exporter template
+Sunflow Open Source Rendering System exporter for Blender
+
+	Sunflow is an open source rendering system for photo-realistic image synthesis. 
+	It is written in Java and built around a flexible ray tracing core and 
+	an extensible object-oriented design. Sunflow installation instructions can be 
+	found out from sunflow web page given below. 
+
+Exporter version:  	
+	0.0.2
+
+System supported: (tested with)
+	Sunflow 		0.07.3
+	Blender 		2.67 or 2.68
+	JDK				1.7.0_25		
+	Os				windows 7 32bit 
+
+You need to get latest 
+
+	Blender from
+		http://www.blender.org/
+		
+	Java SE JDK (to get the server VM) from 
+		http://www.oracle.com/technetwork/java/index.html
+	
+	Sunflow 0.07.3 from
+		http://sfwiki.geneome.net/index.php5?title=Compiling
+		-or-
+
+You can download latest exporter from
+	https://github.com/nodebench/Exporter/wiki/downloads
+	
+Sunflow web page @
+	http://sunflow.sourceforge.net/
+	https://github.com/fpsunflower/sunflow
+	
+Sunflow wiki
+	http://sfwiki.geneome.net/
+	
+Exporter wiki and github source hosting @
+	https://github.com/nodebench/Exporter
+	
+For installing the exporter, download the zip package and from blender user preference 
+click addon tab , in the bottom click 'install from file' select the zip package 
+and enable the addon.Then click save user settings. 
+You can select sunflow from the render drop down menu in the UI. 
+Detailed installation instruction can be foun from the exporter wiki page.
+
+Contact:
+	NodeBench
+	nodebench-at-gmail-dot-com
+	
+
+	
