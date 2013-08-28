@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/bookkeeping/__init__.py=utf8
+encoding//src/bookkeeping/batchrun.py=utf8
 encoding//src/bookkeeping/copyfiles.py=utf8
 encoding//src/bookkeeping/modifyrelease.py=utf8
 encoding//src/bookkeeping/zipit.py=utf8
@@ -9,6 +10,7 @@ encoding//src/sunflow/core/__init__.py=utf8
 encoding//src/sunflow/export/__init__.py=utf8
 encoding//src/sunflow/export/camera.py=utf8
 encoding//src/sunflow/export/instances.py=utf8
+encoding//src/sunflow/export/lamps.py=utf8
 encoding//src/sunflow/export/makescfiles.py=utf8
 encoding//src/sunflow/export/services.py=utf8
 encoding//src/sunflow/export/shaders.py=utf8

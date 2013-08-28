@@ -19,7 +19,7 @@
 #
 # --------------------------------------------------------------------------
 # Blender Version                     2.68
-# Exporter Version                    0.0.1
+# Exporter Version                    0.0.3
 # Created on                          26-Aug-2013
 # Author                              NodeBench
 # --------------------------------------------------------------------------
@@ -32,7 +32,7 @@ def version_bump():
     of the exporter in all files.
     Then manually merge the release branch to the master branch to finalise the release. 
     '''
-    zip_version = '0.0.2'
+    zip_version = '0.0.3'
     search_path = '../sunflow'
     bump(zip_version, search_path)
 
