@@ -194,7 +194,7 @@ class RENDERENGINE_sunflow(bpy.types.RenderEngine):
                 render_update_timer.start()
                 if render_update_timer.isAlive(): render_update_timer.join()
             
-            # If we exit the wait loop (user cancelled) and mitsuba is still running, then send SIGINT
+            # If we exit the wait loop (user cancelled) and sunflow is still running, then send SIGINT
             if sunflow_process.poll() == None:
                 # Use SIGTERM because that's the only one supported on Windows
                 sunflow_process.send_signal(subprocess.signal.SIGTERM)
@@ -297,7 +297,7 @@ class RENDERENGINE_sunflow(bpy.types.RenderEngine):
             render_update_timer.start()
             if render_update_timer.isAlive(): render_update_timer.join()
         
-        # If we exit the wait loop (user cancelled) and mitsuba is still running, then send SIGINT
+        # If we exit the wait loop (user cancelled) and sunflow is still running, then send SIGINT
         if sunflow_process.poll() == None:
             # Use SIGTERM because that's the only one supported on Windows
             sunflow_process.send_signal(subprocess.signal.SIGTERM)

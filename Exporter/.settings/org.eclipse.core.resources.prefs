@@ -12,6 +12,7 @@ encoding//src/sunflow/export/camera.py=utf8
 encoding//src/sunflow/export/instances.py=utf8
 encoding//src/sunflow/export/lamps.py=utf8
 encoding//src/sunflow/export/makescfiles.py=utf8
+encoding//src/sunflow/export/psys.py=utf8
 encoding//src/sunflow/export/services.py=utf8
 encoding//src/sunflow/export/shaders.py=utf8
 encoding//src/sunflow/operators/__init__.py=utf8
