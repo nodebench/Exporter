@@ -19,7 +19,7 @@
 #
 # --------------------------------------------------------------------------
 # Blender Version                     2.68
-# Exporter Version                    0.0.3
+# Exporter Version                    0.0.4
 # Created on                          26-Aug-2013
 # Author                              NodeBench
 # --------------------------------------------------------------------------
@@ -31,7 +31,7 @@ bl_info = {
     "name"       : "Sunflow",
     "description": "Sunflow Render System (v0.07.3) integration for Blender (>2.67)",
     "author"     : "Nodebench" ,
-    "version"    : (0, 0, 3),
+    "version"    : (0, 0, 4),
     "blender"    : (2, 68, 0),
     "api"        : 58537,
     "category"   : "Render",
