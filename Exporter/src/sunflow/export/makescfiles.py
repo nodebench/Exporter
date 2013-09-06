@@ -203,6 +203,17 @@ class SunflowSCFileSerializer():
             self._write_output_block(block, [""] , [] , self._fh, False)
     
     
+    def _comipleModifierBlock(self):
+        '''write Shadermodifier block to .sc file'''
+        if 'Shadermodifier' not in self._di.keys():
+            sunflowLog("No modifier found on this scene.")
+            return
+        shader = self._di['Shadermodifier'].keys()
+        for each_shader in shader:
+            block = self._di['Shadermodifier'][each_shader]
+            self._write_output_block(block, [""] , [] , self._fh, False)    
+    
+    
     def _comipleGlobalIllumination(self):
         '''write Global Illumination block to .sc file'''
         key = 'gi'
@@ -232,6 +243,8 @@ class SunflowSCFileSerializer():
         header.append('/* http://sunflow.sourceforge.net/ */\n')
         self._write_output_block(header, [""] , [] , self._fh, False)
         
+
+    
     
     def _compileMainBlock(self):
         '''write the main .sc file'''
@@ -257,6 +270,7 @@ class SunflowSCFileSerializer():
         self._comipleGlobalIllumination()
         self._comipleOverideGlobalIllumination()
         self._comipleShaderBlock()
+        self._comipleModifierBlock()
         self._compileLightsBlock()
         self._compileLightsWorldBlock()
         self._compileCameraBlock()
@@ -301,10 +315,10 @@ class SunflowSCFileSerializer():
                         int_blk.append("%s %s %s" % (space * indent , "modifiers", num_of_shaders))
                         indent += 1
                         for each_shdr in block_dirct['modifiers']:
-                            int_blk.append("%s %s %s" % (space * indent , "", each_shdr))
+                            int_blk.append("%s %s %s" % (space * indent , "", "%s.m" % each_shdr))
                         indent -= 1
                     else:
-                        int_blk.append("%s %s %s" % (space * indent , "modifier", block_dirct['modifiers'][0]))
+                        int_blk.append("%s %s %s" % (space * indent , "modifier", "%s.m" % block_dirct['modifiers'][0]))
                     indent -= 1
                      
 
@@ -360,10 +374,10 @@ class SunflowSCFileSerializer():
                     int_blk.append("%s %s %s" % (space * indent , "modifiers", num_of_shaders))
                     indent += 1
                     for each_shdr in block_dirct['modifiers']:
-                        int_blk.append("%s %s %s" % (space * indent , "", each_shdr))
+                        int_blk.append("%s %s %s" % (space * indent , "", "%s.m" % each_shdr))
                     indent -= 1
                 else:
-                    int_blk.append("%s %s %s" % (space * indent , "modifier", block_dirct['modifiers'][0]))
+                    int_blk.append("%s %s %s" % (space * indent , "modifier", "%s.m" % block_dirct['modifiers'][0]))
                 
                 num_of_transforms = len(block_dirct['trans_mat']) 
                 if num_of_transforms > 0 :
@@ -508,6 +522,8 @@ class SunflowSCFileSerializer():
         self._compileInstanceBlocks()
         self._compileHairBlock()
         self._compileMainBlock()
+        
+        self.debugPrintDictionary()
         
         self._deleteTempFiles()
         return True

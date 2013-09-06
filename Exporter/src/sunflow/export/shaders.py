@@ -274,20 +274,20 @@ def create_shader_block(mat):
     if  texture_found(mat , 2) :        
         act_mod.append("%s %s %s" % (space * indent , "modifier", "{"))
         indent += 1
-        act_mod.append("%s %s %s" % (space * indent , "name ", '"' + name + '"'))
+        act_mod.append("%s %s %s" % (space * indent , "name ", '"' + name + '.m"'))
         act_mod.append("%s %s %s" % (space * indent , "type", "bump"))
         act_mod.append("%s %s %s" % (space * indent , "texture ", '"' + texture_path(mat , texture_found(mat , 2)) + '"'))
-        act_mod.append("%s %s %s" % (space * indent , "scale", "%+0.4f" % (mat.texture_slots[texture_found(mat , 2) - 1].normal_factor)))
+        act_mod.append("%s %s %s" % (space * indent , "scale", "%+0.4f" % (10.0 * mat.texture_slots[texture_found(mat , 2) - 1].normal_factor)))
         act_mod.append("%s %s %s" % (space * indent , "}", ""))
         indent -= 1
         type_modifier = True
     elif  texture_found(mat , 3)  :        
         act_mod.append("%s %s %s" % (space * indent , "modifier", "{"))
         indent += 1
-        act_mod.append("%s %s %s" % (space * indent , "name ", '"' + name + '"'))
+        act_mod.append("%s %s %s" % (space * indent , "name ", '"' + name + '.m"'))
         act_mod.append("%s %s %s" % (space * indent , "type", "normalmap"))
         act_mod.append("%s %s %s" % (space * indent , "texture ", '"' + texture_path(mat , texture_found(mat , 3)) + '"'))
-        act_mod.append("%s %s %s" % (space * indent , "scale", "%+0.4f" % (mat.texture_slots[texture_found(mat , 3) - 1].displacement_factor)))
+        act_mod.append("%s %s %s" % (space * indent , "scale", "%+0.4f" % (10.0 * mat.texture_slots[texture_found(mat , 3) - 1].displacement_factor)))
         act_mod.append("%s %s %s" % (space * indent , "}", ""))
         indent -= 1
         type_modifier = True
